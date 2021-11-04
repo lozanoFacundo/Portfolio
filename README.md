@@ -4,7 +4,7 @@ Hi everyone! I am Facundo, Data Scientist student for already 2 years + 1 year o
 
 You will be able find different folders with the projects, those are: Virtual Assistant (Chatbot/Keras), Hand Tracking Volume Control (OpenCV), World Population Analysis, Blood Pressure Analysis, Quality of life Countries and Algorithms Excercises.
 
-========================================================================================================================================================================================
+==============================================================================================================================
 
 ¡Hola a todos! Soy Facundo, estudiante  Data Scientist desde hace ya 2 años, más 1 año de estudiante autodidacta. En este repositorio encontrarás mis proyectos como Data Scientist, la mayoría de ellos realizados en entornos académicos a excepción de dos proyectos en los que utilizo Image Recognition y Deep Learning, con el objetivo principal de aprender y adentrarme en el mundo de la data science.
 

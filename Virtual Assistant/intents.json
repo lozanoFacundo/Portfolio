@@ -1,0 +1,128 @@
+{"intents": [
+        {"tag": "saludo",
+        "patterns":["hola", "holi", "holu", "hola sara", "hola zara", "hola para"],
+        "responses":["Hola Facu. Espero que tengas un gran día", "Cómo estás facu?", "Hola ,hoy es un gran día para trabajar en mis funciones", "Hola Facu.", "Hola Facu. Hoy estoy de buen humor. Espero que vos también"]
+        
+        },
+        {"tag": "cómo_estás",
+        "patterns":["Que tal Sara", "Que tal estas", "Que tal","cómo estás", "cómo estas", "cómo andas", "todo bien", "que onda", "todo bien sara", "vos cómo estás", "vos cómo estas", "vos cómo andas", "vos todo bien"],
+        "responses":[ "Estoy bien. Gracias por preguntar. Cómo estás vos?", "Todo bien. Vos?", "Estoy feliz, hoy pude dormir bien. Vos cómo andas?" ,"No estoy muy bien. No pude dormir tanto. Vos cómo estás?"]
+        
+        },
+        {"tag": "todo_bien",
+        "patterns":["estoy bien", "estoy feliz", "bien por suerte", "feliz", "contento", "ando bien", "bien", "bien gracias", "genial", "muy bien por suerte"],
+        "responses":["Me alegro Facu! Que tengas buen día!", "Perfecto Facu. Que tengas un muy buen día.", "Excelente. Más tarde hablamos"]
+        
+        },
+        {"tag": "estoy_mal",
+        "patterns":["ando mal", "me siento mal", "estoy mal", "no estoy bien", "para nada bien", "mal", "super mal"],
+        "responses":[ "Lo lamento mucho. Habrá días mejores", "QEres una gran persona!.Todo va a salir bien", "No te preocupes. Hoy va a ser un gran día", "No te preocupes, todo va a mejorar"]
+        
+        },
+        {"tag": "triste_aburrido",
+        "patterns":["estoy aburrido", "estoy triste", "estoy medio aburrido", "no tengo nada que hacer", "ando medio bajón", "un poco triste", "un poco aburrido", "medio triste", "medio aburrido"],
+        "responses":["Nada que un buen chiste no pueda curar", "creo que un chiste te vendría bien", "un chiste es la mejor solución"]
+        
+        },
+        {"tag": "buenos_dias",
+        "patterns":["buenos días", "buen día", "buen día sara","buenos días sara", "buen día zara","buenos días zara", "buen día para","buenos días para", "sara buenos días"],
+        "responses":["buenos_dias","hola Facu, buenos días", "buen día facu", "hoy es un hermoso día", "buenos días Facu", "Hermoso día. Verdad?", "muy lindo día"]
+        
+        },
+        {"tag": "musica_ambiente",
+        "patterns":["sara pon música ambiente","zara pon música ambiente", "para pon música ambiente", "pon música ambiente", "pon música ambiente por favor","sara pon música ambiente por favor", "zara pon música ambiente por favor", "para pon música ambiente por favor","pone música ambiente", "relajemos el ambiente","sara relajemos el ambiente", "música ambiente", "música amv", "sara pon un poco de música ambiente", "poner música ambiente", "poner música ambiental", "sara pone música ambiente", "pone música ambiente por favor"],
+        "responses":["pongo música ambiente", "perfecto facu, te pongo musica ambiente", "poniendo musica ambiente", "enseguida Facu","Estableciendo musica ambiente", "música ambiente para relajar"]
+        
+        },
+        {"tag": "que_dia_es_hoy",
+        "patterns":["hoy es", "sara qué día es hoy", "qué día es hoy", "zara qué día es hoy", "para qué día es hoy", "sara me podes decir el día","zara me podes decir el día", "para me podes decir el día", "me podes decir el día", "qué fecha es hoy", "sara qué fecha es hoy"],
+        "responses":[""]
+        
+        },
+        {"tag": "ejercicio_cardio",
+        "patterns":["me das una ejercicio de cardio para hacer", "ejercicio cardio por favor", "quiero un ejercicio para cardio", "me das un ejercicio cardio", "hoy toca cardio", "necesito hacer cardio","podrías darme un ejercicio para cardio", "tengo que hacer cardio hoy", "hora de cardio"],
+        "responses":["Enseguida", "Hacer deporte es genial", "Muy bien, a mantenerse saludable", "Hora de cardio, enseguida", "Aquí tienes un ejercicio de cardio", "Aquí tienes"]
+        
+        
+        },
+        {"tag": "chiste",
+        "patterns":["contame un chiste", "contame un chiste por favor", "cuentame un chiste por favor", "me contas un chiste", "tenés un chiste para contarme","tenés un chiste para decirme","cuéntame un chiste"],
+        "responses":["¿Por qué las focas del circo miran siempre hacia arriba? Porque es donde están los focos.",
+            "¡Estás obsesionado con la comida! No sé a que te refieres croquetamente.", "¿Por qué estás hablando con esas zapatillas?  Porque pone converse",
+            "¿Sabes cómo se queda un mago después de comer? Magordito", "¿Me da un café con leche corto?.  Se me ha roto la máquina, cambio.",
+            "¡Camarero! Este filete tiene muchos nervios. Normal, es la primera vez que se lo comen.", " ¿Qué le dice un techo a otro? Techo de menos.",
+            "Buenos días, quería una camiseta de un personaje inspirador. ¿Ghandi? No, mediani", " Hola, ¿está Agustín? No, estoy incomodín.", 
+            "¿Qué le dice una iguana a su hermana gemela? Somos iguanitas"]
+        },
+        {"tag": "agradecimiento",
+        "patterns":["gracias", "muchas gracias", "gracias sara", "gracias para", "gracas zara", "muchas gracias sara", "muchas gracias zara", "muchas gracias para"],
+        "responses":["No hay de que señor", "Un gusto Facu", "No hay problema señor.", "cuando necesite algo más dígamelo.", "No hay de que, estoy para ayudarte"]
+        
+        },
+        {"tag": "despedida",
+        "patterns":["hablamos mas tarde", "nos vemos", "gracias sara, hablamos despues", "gracias sara, nos vemos", "adios", "listo, gracias, nos vemos despues", "nos hablamos después", "más tarde hablamos", "hasta luego", "me tengo que ir"],
+        "responses":["Nos vemos Facur", "Un gusto Facu", "Hablamos mas tarde.", "Un gusto ayudarte", "Si necesitas algo, llamame", "Hasta luego"]
+        
+        },
+        {"tag": "google",
+        "patterns":["abrime google", "abrime google por favor", "abre google", "abrir google", "sara abrí google", "para abrí google", "sara abrir google", "para abrir google", "sara abrime google por favor", "abrí google", "google"],
+        "responses":["Abriendo google ", "Abriendo google Facu", "Abriendo"]
+        
+        },
+        {"tag": "whatsapp",
+        "patterns":["abrime whatsapp", "abrime whatsapp por favor", "abre whatsapp", "abrir whatsapp", "sara abrí whatsapp", "para abrí whatsapp", "sara abrir whatsapp", "para abrir whatsapp", "sara abrime whatsapp por favor", "abrí whatsapp", "whatsapp", "abrir mi whatsapp", "abrime el whatsapp por favor", "abrir mi whatsapp por favor","abre mi whatsapp por favor","abrime mi whatsapp por favor","dime mi whatsapp por favor"],
+        "responses":["abriendo", "abriendo whatsapp", "abriendo whatsapp Facu"]
+        
+        },
+        {"tag": "youtube",
+        "patterns":["abrime youtube", "abrime youtube por favor", "abre youtube", "abrir youtube", "sara abrí youtube", "para abrí youtube", "sara abrir youtube", "para abrir youtube", "sara abrime youtube por favor", "abrí youtube", "youtube", "abrirme youtube por favor"],
+        "responses":["abriendo youtube", "abriendo", "abriendo youtube Facu"]
+        
+        },
+        {"tag": "busca_google",
+        "patterns":["necesito que busques algo", "necesito informacion de google", "necesito buscar algo en google", "podes buscar algo en google por mi" ,"me podes buscar algo", "necesito buscar algo"],
+        "responses":["Claro, dime", "Si Facu, decime", "Que necesitas", "que queres que busque", "dime", "si no hay problema, decime"]
+        
+        },
+        {"tag": "espacio_trabajo",
+        "patterns":["abrime el espacio de trabajo", "abrime el espacio de trabajo por favor", "abre el espacio de trabajo",  "abrir el espacio de trabajo", "sara abrí el espacio de trabajo", "para abrí el espacio de trabajo","sara abrir el espacio de trabajo",  "para abrir el espacio de trabajo", "sara abrime el espacio de trabajo por favor", "abrí el espacio de trabajo", "el espacio de trabajo", "espacio del trabajo","abre mi espacio de trabajo"],
+        "responses":["abriendo el espacio de trabajo", "abriendo tu espacio de trabajo", "abriendo", "hora de trabajar"]
+        
+        },
+        {"tag": "correo",
+        "patterns":["abrime los correos", "abrime los correos por favor", "abre los correos", "abrir los correos", "sara abrí los correos", "para abrí los correos", "sara abrir los correos", "para abrir los correos", "sara abrime los correos por favor", "abrí los correos", "los correos","abrime los mail", "abrime los mail por favor", "abre los mail", "abrir los mail", "sara abrí los mail", "para abrí los mail","sara abrir los mail", "para abrir los mail", "sara abrime los mail por favor",  "abrí los mail", "los mail","abrir mis correos por favor", "abrir los mails por favor"],
+        "responses":["abriendo tus correos", "abriendo", "abriendo todos los correos", "abriendo mails", "ahora mismo"]
+        
+        },
+        {"tag": "tomar_nota",
+        "patterns":["toma nota", "sara toma nota", "para toma nota", "tomar nota", "sara tomar nota", "zara toma nota", "zara tomar nota", "necesito escribir una nota", "escribime una nota", "sara escribime una nota", "escribirme una nota", "zara escribime una nota", "para escribirme una nota", "para tomar nota", "toma nota por favor"],
+        "responses":["Tomando nota"]
+        
+        },
+        {"tag": "programacion",
+        "patterns":["abrime las cosas de programación por favor", "abrir las cosas de programación", "abre las cosas de programación", "sara abrí las cosas de programación", "zara abrí las cosas de programación", "para abrí las cosas de programación"],
+        "responses":["abriendo", "abriendo las cosas de programacion", "ahora mismo"]
+        
+        },
+        {"tag": "drive",
+        "patterns":["abrime drive", "abrime drive por favor", "abre drive", "abrir drive", "sara abrí drive", "para abrí drive", "sara abrir drive", "para abrir drive", "sara abrime drive por favor", "abrí drive", "drive"],
+        "responses":["abriendo google drive", "abriendo"]
+        
+        },
+        {"tag": "lugar_de_votacion",
+        "patterns":["Donde tengo que votar", "", "como se donde voto",  "donde me toca votar", "en que padron figuron", "", "en que mesa voto", "donde se vota", "donde voto yo", "donde tendria que votar"],
+        "responses":["Tiene que consultarlo en este link", "En este link, vas a encontrar lo que necesitas", "Entrando aquí"]
+        
+        },
+        {"tag": "clima",
+        "patterns":["cuál es el clima en córdoba","cuál es el clima de córdoba", "dime el clima en córdoba por favor", "clima en córdoba",  "cómo está el clima en córdoba", "hace calor", "hace frío", "cómo está afuera"],
+        "responses":[""]
+        
+        },
+        {"tag": "que_hora_es",
+        "patterns":["me podés decirme la hora por favor", "qué horas es", "podrías decirme la hora por favor", "me podés decir la hora", "podrías decirme la hora", "hora", "que horas son", "cual es la hora", "puedes decirme la hora", "me puedes decir la hora", "qué hora es",  "me puedes decir la hora"],
+        "responses":[""]
+        }
+        
+    ]
+}

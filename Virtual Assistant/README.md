@@ -20,6 +20,8 @@ Step by Step:
 
 6- Sara.py: Importing all the necessary functions from the other files, I put together a simple structure based on If Statements that allow you to use the listener function, process with the engine, call the corresponding function, and respond with the function speaks.
 
+===========================================================================================================
+
 SPANISH:
 
 Sara es un asistente virtual cuyo objetivo era ayudarme a automatizar algunas acciones en mi computadora. 

@@ -8,8 +8,8 @@ df1=df.groupby(['Edad', 'Sexo'],as_index=False)['PA_max'].mean()
 df1
 
 
-fig = px.scatter(df1, x=df1.Edad, y=df1.PA_max, color=df1.Sexo ,labels={"x": "Edad", "y": "Presion Arterial", "color": "Sexo" }, title="Edad-Sexo-PA_max promedios")
-fig.show()
+fig_1 = px.scatter(df1, x=df1.Edad, y=df1.PA_max, color=df1.Sexo ,labels={"x": "Edad", "y": "Presion Arterial", "color": "Sexo" }, title="Edad-Sexo-PA_max promedios")
+fig_1.show() # Graph_1
 
 """
 [Podemos ver como a medida que aumenta la edad, los promedios de PA van creciendo por ende podemos confirmar que hay una relación directa entre Edad y PA.
@@ -43,23 +43,69 @@ hipertension1 , hipertension2, emergencia= df2.loc[df2["Condicion-P"] == "Hipert
 
 # Our Plots / Nuestros gráficos
 
-fig  = px.line(bajo, x=bajo.Edad, y=bajo.PA_max, title="Cantidad de casos con Presion Baja")
-fig2 = px.line(normal, x=normal.Edad, y=normal.PA_max, title="Cantidad de casos con Presion Normal")
-fig3 = px.line(alta, x=alta.Edad, y=alta.PA_max, title="Cantidad de casos con Presion Alta")
-fig4 = px.line(hipertension1, x=hipertension1.Edad, y=hipertension1.PA_max, title="Cantidad de casos con Hipertension Nivel 1")
-fig5 = px.line(hipertension2, x=hipertension2.Edad, y=hipertension2.PA_max, title="Cantidad de casos con Hipertension Nivel 2")
-fig6 = px.line(emergencia, x=emergencia.Edad, y=emergencia.PA_max, title="Cantidad de casos Emergencia")
+fig_2_1   = px.line(bajo, x=bajo.Edad, y=bajo.PA_max, title="Cantidad de casos con Presion Baja") # Graph_2_1
+fig_2_2 = px.line(normal, x=normal.Edad, y=normal.PA_max, title="Cantidad de casos con Presion Normal") # Graph_2_2
+fig_2_3 = px.line(alta, x=alta.Edad, y=alta.PA_max, title="Cantidad de casos con Presion Alta") # Graph_2_3
+fig_2_4 = px.line(hipertension1, x=hipertension1.Edad, y=hipertension1.PA_max, title="Cantidad de casos con Hipertension Nivel 1") # Graph_2_4
+fig_2_5 = px.line(hipertension2, x=hipertension2.Edad, y=hipertension2.PA_max, title="Cantidad de casos con Hipertension Nivel 2") # Graph_2_5
+fig_2_6 = px.line(emergencia, x=emergencia.Edad, y=emergencia.PA_max, title="Cantidad de casos Emergencia") # Graph_2_6
 """
-As an addition, there is a parameter in Plotly that allows you to use lines to mark areas, in the graphs I use them but if I detail them here the code would be very large]
+[Como añadido hay un parámetro en Plotly que te permite usar líneas para marcar áreas, en las gráficas las uso pero si las detallo aquí el código sería muy grande]
 """
-fig.show()
-fig2.show()
-fig3.show()
-fig4.show()
-fig5.show()
-fig6.show()
+fig_2_1.show()
+fig_2_2.show()
+fig_2_3.show()
+fig_2_4.show()
+fig_2_5.show()
+fig_2_6.show()
 
 """
 [Aquí a medida que vemos cada tipo de condición, vemos que la cantidad de casos es mayor para gente joven en casos de condiciones normales o bajas pero es mayor para gente 
 grande a medida que las condiciones son críticas.]
+"""
+
+# Dispersion analysis / Analisis de Dispersión
+
+fig_3_1 = px.box(df, x=df["Clasificación-E"], y=df["PA_max"],color=df["Sexo"]) # Graph_3_1
+fig_3_1.show()
+
+fig_3_2 = px.violin(df, y=df["PA_max"], x=df["Clasificación-E"], color=df["Sexo"], box=True, hover_data=df.columns) # Graph_3_2
+fig_3_2.show()
+
+"""
+Como segundo acercamiento, veremos como la variable IMC podría afectar a la Presión Arterial. Viendo los graficos nos llama la atención como hay muchos jovenes con 
+presión alta. Debemos recordar que aparte de la Edad, teníamos también variable como el Sexo y el IMC.
+"""
+
+# creamos un data frame agrupando por la condición de PA (la necesitaremos luego) y la PA_max. A esto le pedimos el promedio del IMC para cada caso
+# We create a data frame grouping by the PA condition (we will need it later) and the PA_max. We ask this for the average IMC for each case.
+df3=df.groupby(['Condicion-P','Edad','Sexo'],as_index=False)[['PA_max', 'IMC']].mean().sort_values(["Edad", "Condicion-P"], ascending=[True, True])
+df3
+
+# sub dividimos nuestro dataframe en pequeños dataframes según condición de IMC / we divide our dataframe into small dataframes according to IMC condition
+
+bajo, normal, alta= df3.loc[df3["Condicion-P"] == "Bajo"],  df3.loc[df3["Condicion-P"] == "Normal"], df3.loc[df3["Condicion-P"] == "Alta"]
+hipertension1 , hipertension2, emergencia= df3.loc[df3["Condicion-P"] == "Hipertensión-1"], df3.loc[df3["Condicion-P"] == "Hipertensión-2"], df3.loc[df3["Condicion-P"] == "Emergencia"]
+hipertension2
+
+fig_4_1 = px.scatter(bajo, x=bajo.IMC, y=bajo.PA_max, title="Promedio de IMC con Presion Baja") # Graph_4_1
+fig_4_2 = px.scatter(normal, x=normal.IMC, y=normal.PA_max, title="Promedio de IMC con Presión normal" ) # Graph_4_2
+fig_4_3 = px.scatter(alta, x=alta.IMC, y=alta.PA_max, title="Promedio de IMC con Presión Alta") # Graph_4_3
+fig_4_4 = px.scatter(hipertension1, x=hipertension1.IMC, y=hipertension1.PA_max, title="Promedio de IMC con Hipertensión nivel 1") # Graph_4_4
+fig_4_5 = px.scatter(hipertension2, x=hipertension2.IMC, y=hipertension2.PA_max, title="Promedio de IMC con Hipertensión nivel 2") # Graph_4_5
+fig_4_6 = px.scatter(emergencia, x=emergencia.IMC, y=emergencia.PA_max, title="Promedio de IMC con presión Emergencia") # Graph_4_6
+
+fig_4_1.show()
+fig_4_2.show()
+fig_4_3.show()
+fig_4_4.show()
+fig_4_5.show()
+fig_4_6.show()
+
+"""
+Viendo detenidamente los graficos anteriores podemos ver como a medida que pasamos de grupo (condición) de menor a mayor PA, los casos van moviendose levemente de 
+izquierda a derecha, es decir van creciendo la PA a medida que crece el IMC. Esto lo podemos notar clasamente en el último grafico de los casos de emergencia.
+
+Si bien la relación es leve, podríamos afirmar que solemos encontrar más personas en estado de emergencia cuando estas tienen un IMC alto.
+No nos podríamos basar únicamente en esta variable ya que la cantidad de casos de emergencia con un IMC normal también son muchos.
 """

@@ -20,6 +20,8 @@ Step by Step:
 
 6- Sara.py: Importing all the necessary functions from the other files, I put together a simple structure based on If Statements that allow you to use the listener function, process with the engine, call the corresponding function, and respond with the function speaks.
 
+Being a custom Virtual Assistant, there are functions using APIs that require work on your part. I will leave a folder with functions with APIs like Spotify, Weather, etc where you should use your data.
+
 ==========================================================================================
 
 SPANISH:
@@ -43,3 +45,6 @@ Paso a paso:
 5- funciones.py: En este archivo concentraremos todas las funciones que queremos que tenga Sara. 
 
 6- Sara.py: Importando todas las funciones necesarias de los demás archivos, armé una estructura simple en base a If Statements que le perimitan utilizar la función de escucha, procesar con el motor, llamar a la función correspondiente, y responder con la función habla.
+
+Al ser un Asistente Virtual personalizado, hay funciones utilizando APIs que requieren de trabajo por tu parte. Dejaré una carpeta con funciones con APIs cómo Spotify, el Clima, etc donde tendrías que utilizar tus datos.
+

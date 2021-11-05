@@ -58,3 +58,8 @@ fig3.show()
 fig4.show()
 fig5.show()
 fig6.show()
+
+"""
+[Aquí a medida que vemos cada tipo de condición, vemos que la cantidad de casos es mayor para gente joven en casos de condiciones normales o bajas pero es mayor para gente 
+grande a medida que las condiciones son críticas.]
+"""

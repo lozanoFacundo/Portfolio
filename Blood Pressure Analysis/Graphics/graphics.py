@@ -1,4 +1,6 @@
 import plotly.express as px
+import pandas
+import numpy
 """
 Como primer acercamiento, sabemos que la presión arterial aumenta con la edad y varía dependiendo el sexo por ende en base a esto graficaremos nuestros datos 
 para tener un mejor entendimiento:

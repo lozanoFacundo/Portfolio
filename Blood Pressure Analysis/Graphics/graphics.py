@@ -109,3 +109,18 @@ izquierda a derecha, es decir van creciendo la PA a medida que crece el IMC. Est
 Si bien la relación es leve, podríamos afirmar que solemos encontrar más personas en estado de emergencia cuando estas tienen un IMC alto.
 No nos podríamos basar únicamente en esta variable ya que la cantidad de casos de emergencia con un IMC normal también son muchos.
 """
+
+"""
+Como tercer acercamiento veremos si podemos ver alguna relación entre la Edad, IMC y la PA_max
+"""
+df4=df.groupby(['Sexo','Edad'],as_index=False)[['PA_max', 'IMC']].mean().sort_values(["Edad", "PA_max"], ascending=[True, True])
+
+fig_5_1 = px.scatter_3d(df4, x=df4.Edad, y=df4.PA_max, z=df4.IMC, color=df4.Sexo, size_max=8, title="Relación Edad-IMC-Sexo Completo")
+fig_5_1.show()
+
+"""
+CONCLUSIONES
+        - Podemos confirmar que las variables IMC y Edad afectan a los valores de la Presión Arterial, al menos en nuestro conjunto de datos.
+        - La variable Sexo no tiene un gran impacto ya que los valores de PA para Hombres y Mujeres no se sacan una gran diferencia.
+        - La variable Edad tiene mucha más influencia en la Presión Arterial que el IMC, aunque el IMC también influye.
+"""

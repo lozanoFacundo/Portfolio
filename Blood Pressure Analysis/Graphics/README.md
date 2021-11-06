@@ -5,7 +5,7 @@ Here you will find 3 files, a file with pure python where you will only see the 
 
 I recommend that in order for you to fully understand it, you copy all the code from the .py file and paste it into a Jupyter Notebook. The libraries used were Pandas, Numpy and Plotly
 
-===================================================================================================================
+==============================================================================================
 
 SPANISH
 

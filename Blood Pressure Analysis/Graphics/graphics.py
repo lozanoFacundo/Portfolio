@@ -126,3 +126,27 @@ CONCLUSIONES
         - La variable Sexo no tiene un gran impacto ya que los valores de PA para Hombres y Mujeres no se sacan una gran diferencia.
         - La variable Edad tiene mucha más influencia en la Presión Arterial que el IMC, aunque el IMC también influye.
 """
+
+# let's discover the relationships between the variables applying a scatter with regression method
+# descubramos las relaciones entre las variables aplicando un scatter con método de regresión
+
+df5 = df.groupby(['Edad', 'Sexo'],as_index=False)['PA_max'].mean() 
+df6 = df.groupby(['PA_max', 'Sexo'],as_index=False)['IMC'].mean() 
+
+df1_h = df1[(df1.Sexo=="M")]
+df1_m = df1[(df1.Sexo=="F")]
+
+fig_6_1 = px.scatter(df5, x=df1_h.Edad, y=df1_h.PA_max,labels={
+                     "x": "Edad",
+                     "y": "Presion Arterial"
+                 },
+                title="Edad-PA_max promedios Hombres", trendline="ols")
+
+fig_6_2 = px.scatter(df5, x=df1_m.Edad, y=df1_m.PA_max,labels={
+                     "x": "Edad",
+                     "y": "Presion Arterial"
+                 },
+                title="Edad-PA_max promedios Mujeres", trendline="ols")
+
+fig_6_1.show()
+fig_6_2.show()
